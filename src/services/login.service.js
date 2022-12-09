@@ -17,7 +17,7 @@ const { password, ...userLogin } = user.dataValues;
 const token = jwt
 .sign(
  { data: userLogin },  
- process.env.JWT_SECRET || '1345', { algorithm: 'HS256' }, { expiresIn: '15min' },
+ process.env.JWT_SECRET || '1345', { algorithm: 'HS256' }, { expiresIn: '7d' },
   );
 return token;
 };
