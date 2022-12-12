@@ -6,7 +6,6 @@ module.exports = (req, res, next) => {
     const token = req.header('Authorization');
     // console.log('** TOKEN AUTHO CONTROLLER **', token);
     if (!token) return res.status(401).send({ message: 'Token not found' });
-  // const sercret =  process.env.JWT_SECRET || '1345';
     const validJwt = jwt.verify(token, process.env.JWT_SECRET || '1345');
     console.log('** validJwt AUTHO CONTROLLER **', validJwt);
   } catch (error) {

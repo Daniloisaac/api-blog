@@ -32,8 +32,21 @@ const createNewUser = await userModel.User.create({ displayName: newUser.display
   });
 const { password, ...userData } = createNewUser.dataValues;
   const token = jwt.sign({ data: userData },
-     process.env.JWT_SECRET || '12345', { algorithm: 'HS256' }, { expiresIn: '15min' });
+     process.env.JWT_SECRET || '12345', { algorithm: 'HS256' }, { expiresIn: '1min' });
   return token;
 };
 
-module.exports = { insertNewUser };
+const findAllUsersService = async () => {
+const getAll = await userModel.User.findAll();
+const a = getAll.map(({ dataValues }) => ({
+  id: dataValues.id,
+  displayName: dataValues.displayName,
+  email: dataValues.email,
+  image: dataValues.image,
+}));
+console.log('**RETURNO DO FIND ALL SERVICE**', a);
+// const { password, ...userData } = getAll.dataValues;
+  return a;
+};
+
+module.exports = { insertNewUser, findAllUsersService };
