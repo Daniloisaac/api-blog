@@ -13,4 +13,15 @@ const allUsers = await userService.findAllUsersService();
 res.status(200).send(allUsers);
 };
 
-module.exports = { createdNewUser, getAllUsersController };
+const getUsersByIdController = async (req, res) => {
+  const { id } = req.params;
+  const user = await userService.findUserByIdService(id);
+  if (user.messageError) return res.status(user.status).send({ message: user.messageError });
+  res.status(200).send(user);
+  };
+
+module.exports = { 
+  createdNewUser,
+  getAllUsersController,
+  getUsersByIdController,
+ };
