@@ -38,15 +38,27 @@ const { password, ...userData } = createNewUser.dataValues;
 
 const findAllUsersService = async () => {
 const getAll = await userModel.User.findAll();
-const a = getAll.map(({ dataValues }) => ({
+const passwordRemoverTheOfUsers = getAll.map(({ dataValues }) => ({
   id: dataValues.id,
   displayName: dataValues.displayName,
   email: dataValues.email,
   image: dataValues.image,
 }));
-console.log('**RETURNO DO FIND ALL SERVICE**', a);
-// const { password, ...userData } = getAll.dataValues;
-  return a;
+// console.log('**RETURNO DO FIND ALL SERVICE**');
+  return passwordRemoverTheOfUsers;
 };
 
-module.exports = { insertNewUser, findAllUsersService };
+const findUserByIdService = async (id) => {
+  const getAll = await userModel.User.findAll();
+  const [getUserById] = await userModel.User.findAll({ where: { id } });
+  if (getAll.length < id) return { status: 404, messageError: 'User does not exist' };
+  const { password, ...userData } = getUserById.dataValues;
+  console.log('**RETURNO DO FIND ALL SERVICE**', getUserById);
+    return userData;
+  };
+
+module.exports = {
+   insertNewUser,
+   findAllUsersService, 
+   findUserByIdService,
+   };
