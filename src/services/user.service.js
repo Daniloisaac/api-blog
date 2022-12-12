@@ -53,7 +53,7 @@ const findUserByIdService = async (id) => {
   const [getUserById] = await userModel.User.findAll({ where: { id } });
   if (getAll.length < id) return { status: 404, messageError: 'User does not exist' };
   const { password, ...userData } = getUserById.dataValues;
-  console.log('**RETURNO DO FIND ALL SERVICE**', getUserById);
+  // console.log('**RETURNO DO FIND ALL SERVICE**', getUserById);
     return userData;
   };
 
