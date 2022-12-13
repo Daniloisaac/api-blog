@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const blogPost = sequelize.define('blogPost', {
+  const BlogPost = sequelize.define('BlogPost', {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -19,12 +19,12 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'blog_posts',
   });
 
-  blogPost.associate = (models) => {
-    blogPost.belongsTo(models.User, {
+  BlogPost.associate = (models) => {
+    BlogPost.belongsTo(models.User, {
       as: 'user',
       foreignKey: 'user_id',
     })
   }
 
-  return blogPost;
+  return BlogPost;
 };
