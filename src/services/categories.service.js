@@ -19,5 +19,5 @@ return getAll;
 
 module.exports = { 
   insertNewCategorie,
-  getAllService,
+  getAllService,  
  };

@@ -1,12 +1,12 @@
 const postsModels = require('../models');
 
-const insertNewPost = async (newPost) => {
+const insertNewPostService = async (newPost) => {
 const createNewPost = await postsModels.PostCategory.create({
-  title: newPost,
-  content: newPost,
-  categoryIds: newPost,
+  title: newPost.title,
+  content: newPost.content,
+  categoryIds: newPost.categoryIds,
 });
 return createNewPost;
 };
  
-module.exports = { insertNewPost };
+module.exports = { insertNewPostService };
