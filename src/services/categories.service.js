@@ -17,7 +17,14 @@ console.log('** RESULTADO DO getAll CATEGORIE **', getAll);
 return getAll; 
 };
 
+const getByIdService = async (id) => {
+  const [getById] = await categoriesModel.Category.findAll({ where: { id } });
+  // console.log('** RESULTADO DO getAll CATEGORIE **', getAll);
+  return getById; 
+  };
+
 module.exports = { 
   insertNewCategorie,
-  getAllService,  
+  getAllService,
+  getByIdService,  
  };

@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
   },
     name: DataTypes.STRING,
   }, {
-    sequelize,
     timestamps: false,
     underscored: true,
     tableName: 'categories'
