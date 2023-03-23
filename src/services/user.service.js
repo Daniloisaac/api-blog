@@ -44,7 +44,6 @@ const passwordRemoverTheOfUsers = getAll.map(({ dataValues }) => ({
   email: dataValues.email,
   image: dataValues.image,
 }));
-// console.log('**RETURNO DO FIND ALL SERVICE**');
   return passwordRemoverTheOfUsers;
 };
 
@@ -53,7 +52,6 @@ const findUserByIdService = async (id) => {
   const [getUserById] = await userModel.User.findAll({ where: { id } });
   if (getAll.length < id) return { status: 404, messageError: 'User does not exist' };
   const { password, ...userData } = getUserById.dataValues;
-  // console.log('**RETURNO DO FIND ALL SERVICE**', getUserById);
     return userData;
   };
 

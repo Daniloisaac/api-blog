@@ -9,7 +9,6 @@ const verifyLogin = async (userData) => {
 }
 
 const user = await User.findOne({ where: { email: userData.email, password: userData.password } });
-console.log('***USER DO SERVICE--', user);
 if (!user) {
   return { status: 400, messageError: 'Invalid fields' };
 }
