@@ -1,4 +1,4 @@
-# projeto Car Shop
+# projeto Api Blog
 
 O projeto Api Blog, é uma API REST para a produção de um blog!. utilizando o banco de dados MySQL através do framework Sequelize.
 # tecnologias usadas
