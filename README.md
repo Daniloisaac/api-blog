@@ -4,7 +4,7 @@ O projeto Api Blog, é uma API REST para a produção de um blog!. utilizando o 
 # tecnologias usadas
 
 * ![MySQl][MySQl]
-* ![Typescript][Typescript]
+* ![Javascript][Javascript]
 * ![Express][Express.js]
 * ![docker][docker]
 * ![eslint][eslint]
@@ -13,7 +13,7 @@ O projeto Api Blog, é uma API REST para a produção de um blog!. utilizando o 
 
 [MySQl]: https://img.shields.io/badge/mysql-0769AD?style=for-the-badge&logo=mysql&logoColor=white
 
-[Typescript]: https://img.shields.io/badge/javascript-fdca01?style=for-the-badge&logo=javascript&logoColor=white
+[Javascript]: https://img.shields.io/badge/javascript-fdca01?style=for-the-badge&logo=javascript&logoColor=white
 
 [Express.js]: https://img.shields.io/badge/Express-35495E?style=for-the-badge&logo=Express&logoColor=4FC08D
 
@@ -56,5 +56,5 @@ Email: <br>
 <a href = "mailto:daniloisaac942@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 
 # :construction: README customizado em construção ! :construction:
-irei colocar mais detalhes sobre o projeto e de como usalo 
+irei colocar mais detalhes sobre o projeto e de como usar
 
